@@ -43,7 +43,7 @@ Enviar uma solicitação para where is , , or retornará para você (no formato 
 Observe que cada e-mail especifica seu (um identificador exclusivo), um endereço de e-mail, uma matriz de , uma string para , , e , bem como dois valores booleanos indicando se o e-mail foi e se o e-mail foi
 
 botemos esse json no seguinte codigo:
-  fetch('/emails/inbox')
+fetch('/emails/inbox')
   .then(response => response.json())
   .then(emails => {
       // Print emails
