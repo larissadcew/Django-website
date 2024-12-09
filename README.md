@@ -14,6 +14,8 @@ A interface do usuário é altamente interativa, graças ao uso de JavaScript. A
 No backend, as rotas da API são definidas para obter, enviar e atualizar e-mails. Por exemplo, a rota GET /emails/<mailbox> obtém todos os e-mails em uma caixa de correio específica, enquanto POST /emails envia um novo e-mail. O código Django para essas rotas inclui funções que interagem com o banco de dados para recuperar e salvar e-mails.
 
 # views.py
+
+```python
 from django.http import JsonResponse
 from .models import Email
 
@@ -32,8 +34,10 @@ def send_email(request):
     )
     email.save()
     return JsonResponse({"message": "Email sent successfully."}, status=201)
+```
 
 Enviar uma solicitação para GET /emails/<mailbox>, onde <mailbox> é inbox, sent ou archive, retornará uma lista de todos os e-mails nessa caixa de correio, em ordem cronológica inversa. Por exemplo, se você enviar uma solicitação para GET /emails/inbox, poderá obter uma resposta JSON como a abaixo (representando dois e-mails):
+```python
 
 [
     {
@@ -57,12 +61,14 @@ Enviar uma solicitação para GET /emails/<mailbox>, onde <mailbox> é inbox, se
         "archived": false
     }
 ]
+```
 
 
 Observe que cada e-mail especifica seu id (um identificador exclusivo), sender (um endereço de e-mail), uma matriz de recipients, uma string para subject, body, e timestamp, bem como dois valores booleanos indicando se o e-mail foi read e se o e-mail foi archived.
 
 No frontend, o arquivo JavaScript inbox.js é responsável por anexar ouvintes de eventos aos botões e manipular a interface do usuário. Quando um botão é clicado, funções JavaScript são chamadas para carregar a caixa de correio correspondente ou exibir o formulário de composição. A função load_mailbox faz uma solicitação fetch para a API para obter os e-mails e atualizar a interface do usuário. A função compose_email exibe o formulário de composição e limpa os campos de entrada
 
+```python
 // inbox.js
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#inbox').addEventListener('click', () => load_mailbox('inbox'));
@@ -89,6 +95,7 @@ function compose_email() {
     document.querySelector('#compose-subject').value = '';
     document.querySelector('#compose-body').value = '';
 }
+```
 
 No frontend, o arquivo JavaScript inbox.js é responsável por anexar ouvintes de eventos aos botões e manipular a interface do usuário. Quando um botão é clicado, funções JavaScript são chamadas para carregar a caixa de correio correspondente ou exibir o formulário de composição. A função load_mailbox faz uma solicitação fetch para a API para obter os e-mails e atualizar a interface do usuário. A função compose_email exibe o formulário de composição e limpa os campos de entrada.
 
