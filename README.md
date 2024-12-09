@@ -1,6 +1,15 @@
-# Desenvolvendo um Cliente com API: Envio e Recebimento de E-mails
+### Building a Single-Page Email Client with Django and JavaScript
+Neste blog,iremos A deep dive into creating a modern email client using Django's backend capabilities and JavaScript's dynamic frontend features.
 ![image](https://github.com/user-attachments/assets/d48767a4-34af-4691-a47f-08742d8976d7)
 
-Neste blog,iremos fazer criar um front-end para um cliente de e-mail que faça chamadas de API para enviar e receber e-mails.
+## Project Overview
 
+This project implements a single-page email application where users can send, receive, and archive messages. Unlike traditional email clients, all messages are stored in a local database rather than connecting to external email servers.
 
+# User registration and authentication
+# Three mail folders: Inbox, Sent, and Archive
+# Single-page application (SPA) architecture
+# Dynamic content loading without page refreshes
+# Email composition interface
+
+### Api
