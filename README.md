@@ -1,5 +1,7 @@
 # Building a Single-Page Email Client with Django and JavaScript
-## Neste blog,iremos A deep dive into creating a modern email client using Django's backend capabilities and JavaScript's dynamic frontend features.
+
+
+Neste blog,iremos A deep dive into creating a modern email client using Django's backend capabilities and JavaScript's dynamic frontend features.
 ![image](https://github.com/user-attachments/assets/d48767a4-34af-4691-a47f-08742d8976d7)
 
 ## Project Overview
