@@ -6,10 +6,9 @@ Neste blog,iremos A deep dive into creating a modern email client using Django's
 
 This project implements a single-page email application where users can send, receive, and archive messages. Unlike traditional email clients, all messages are stored in a local database rather than connecting to external email servers.
 
-# User registration and authentication
-# Three mail folders: Inbox, Sent, and Archive
-# Single-page application (SPA) architecture
-# Dynamic content loading without page refreshes
-# Email composition interface
+# Html
+# javascript api
+# python
+# banco de dados /api
 
 ### Api
