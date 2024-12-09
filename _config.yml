@@ -1,2 +1,5 @@
-title: mail
-theme: jekyll-theme-midnight
+title: Django website
+description: Django website
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-tactile
